@@ -24,7 +24,7 @@ public class Window {
     public void createWindow(){
 
         // フレームの初期設定
-        FrameDesign fd  = new FrameDesign(mainFrame, WINDOW_WIDTH, WINDOW_HEIGHT);
+        // FrameDesign fd  = new FrameDesign(mainFrame, WINDOW_WIDTH, WINDOW_HEIGHT);
 
         // ウインドウを表示
         mainFrame.setVisible(true);
