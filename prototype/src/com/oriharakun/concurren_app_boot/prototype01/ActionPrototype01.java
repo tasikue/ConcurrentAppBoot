@@ -9,8 +9,9 @@ public class ActionPrototype01 implements ActionListener{
 
     // 変数
     JButton button;
-    String[] argAtomPath = {"C:\\Users\\swing\\AppData\\Local\\atom\\atom.exe", "01"};
-    String[] argFfftpPath = {"C:\\Users\\swing\\Documents\\ソフトウェア\\ffftp-v5.8-x64\\ffftp.exe", "01"};
+    String[] argFirefoxPath = {"C:\\Program Files\\Mozilla Firefox\\firefox.exe", "https://www.google.co.jp/"};
+    String[] argVSCodePath = {"C:\\Users\\swing\\scoop\\apps\\vscode\\current\\Code.exe"};
+    String[] argGitBashPath = {"C:\\Users\\swing\\scoop\\apps\\git\\current\\git-bash.exe", "--cd-to-home"};
 
 
     public ActionPrototype01(JButton button){
@@ -21,8 +22,9 @@ public class ActionPrototype01 implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == button) {
-            openApp(argAtomPath);
-            openApp(argFfftpPath);
+            openApp(argFirefoxPath);
+            openApp(argVSCodePath);
+            openApp(argGitBashPath);
         }
     }
 
