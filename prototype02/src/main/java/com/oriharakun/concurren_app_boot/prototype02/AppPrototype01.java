@@ -41,7 +41,7 @@ public class AppPrototype01 {
         int panelHeight = WINDOW_HEIGHT - MARGIN*4;
 
         //ボタンサイズ
-        int buttonWidth = 50;
+        int buttonWidth = 100;
         int buttonHeight = 50;
 
         // フレームの設定 

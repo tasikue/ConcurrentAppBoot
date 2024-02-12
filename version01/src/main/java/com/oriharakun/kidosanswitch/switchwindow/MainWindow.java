@@ -5,6 +5,7 @@ import java.awt.*;
 import com.oriharakun.kidosanswitch.switchwindow.frame.*;
 import com.oriharakun.kidosanswitch.switchwindow.panel.*;
 import com.oriharakun.kidosanswitch.switchwindow.button.*;
+import com.oriharakun.kidosanswitch.switchwindow.menubar.*;
 
 public class MainWindow {
 
@@ -12,9 +13,11 @@ public class MainWindow {
         SwitchFrame sf = new SwitchFrame();
         SwitchPanel p1 = new SwitchPanel();
         RuntimeButton rb = new RuntimeButton();
+        SwitchMenuBar smb = new SwitchMenuBar();
 
-        Container contentPane = sf.getContentPane();
         p1.add(rb);
-        contentPane.add(p1);
+        sf.setJMenuBar(smb);
+        sf.add(p1);
+        sf.setVisible(true);
     }
 }

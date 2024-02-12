@@ -1,7 +1,11 @@
 package com.oriharakun.kidosanswitch.switchwindow.frame;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.FlowLayout;
+import java.awt.Rectangle;
+import java.awt.Dimension;
+import java.awt.GraphicsEnvironment;
+import javax.swing.JFrame;
+import javax.swing.ImageIcon;
 
 import com.oriharakun.kidosanswitch.constants.*;
 
@@ -13,19 +17,17 @@ import com.oriharakun.kidosanswitch.constants.*;
 public class SwitchFrame extends JFrame{
 
     // 変数
-    final int windowWidth = ConstantNumber.WINDOW_WIDTH.getElement();
-    final int windowHeight = ConstantNumber.WINDOW_HEIGHT.getElement();
-    final ImageIcon iconPath = new ImageIcon(ConstantPath.ICON_PATH.getElement());
+    final Dimension WIN_DIMENSION = ConstantDimension.WINDOW_DIMENSION.getElement();
+    final ImageIcon iconPath = new ImageIcon(ConstantName.ICON_PATH.getElement());
 
     public SwitchFrame(){
 
         this.setTitle(ConstantName.FRAME_MAIN_TITLE.getElement());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBounds(windowX(), windowY(), windowWidth, windowHeight);
         this.setLayout(new FlowLayout());
+        this.setSize(WIN_DIMENSION);
+        this.setLocation(windowX(), windowY());
         this.setIconImage(iconPath.getImage());
-
-        this.setVisible(true);
     }
 
     /**
@@ -43,9 +45,7 @@ public class SwitchFrame extends JFrame{
      * @return フレームのX座標
      */
     private int windowX(){
-        int screenWidth = (int) getScreenSize().getWidth();
-
-        return screenWidth - windowWidth;
+        return (int) (getScreenSize().getWidth() - WIN_DIMENSION.getWidth());
     }
 
     /**
@@ -53,8 +53,6 @@ public class SwitchFrame extends JFrame{
      * @return フレームのY座標
      */
     private int windowY(){
-        int screenHeight = (int) getScreenSize().getHeight();
-
-        return screenHeight - windowHeight;
+        return (int) (getScreenSize().getHeight() - WIN_DIMENSION.getHeight());
     }
 }
