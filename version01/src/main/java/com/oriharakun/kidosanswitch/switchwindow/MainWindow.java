@@ -1,7 +1,5 @@
 package com.oriharakun.kidosanswitch.switchwindow;
 
-import java.awt.*;
-
 import com.oriharakun.kidosanswitch.switchwindow.frame.*;
 import com.oriharakun.kidosanswitch.switchwindow.panel.*;
 import com.oriharakun.kidosanswitch.switchwindow.button.*;
