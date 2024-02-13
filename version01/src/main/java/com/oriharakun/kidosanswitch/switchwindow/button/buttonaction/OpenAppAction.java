@@ -5,13 +5,14 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 
 import javax.swing.JButton;
-import com.oriharakun.kidosanswitch.variables.*;
+
+import com.oriharakun.kidosanswitch.setlist.*;
 
 public class OpenAppAction implements ActionListener{
 
     // 変数
     JButton button;
-    VariablesRuntimePathManagement vrpm = new VariablesRuntimePathManagement();
+    MysetManagement mm = new MysetManagement();
 
 
     // コンストラクタ
@@ -23,10 +24,11 @@ public class OpenAppAction implements ActionListener{
     public void actionPerformed(ActionEvent event){
 
         if(event.getSource() == button){
-            
-            for(int i=1; i<2; i++){
-                for(int j=1; j<4; j++){
-                    openApp(vrpm.getArrayPath(i, j));
+
+            // 定数1はマイセットid, アクティブになってるボタンで決まる
+            if(mm.getjavaMyset().getMysetId() == 1){
+                for(String path : mm.getjavaMyset().getRuntimePath().getPath()){
+                    openApp(separateString(path));
                 }
             }
         }
@@ -43,5 +45,13 @@ public class OpenAppAction implements ActionListener{
         } catch(IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * カンマでStringを配列に分解する
+     * これは後でクラスに切り離す
+     */
+    private String[] separateString(String text){
+        return text.split(",");
     }
 }

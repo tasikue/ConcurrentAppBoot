@@ -3,6 +3,7 @@ package com.oriharakun.kidosanswitch.switchwindow.menubar;
 import javax.swing.JMenuBar;
 
 import com.oriharakun.kidosanswitch.constants.*;
+import com.oriharakun.kidosanswitch.setlist.*;
 import com.oriharakun.kidosanswitch.switchwindow.menubar.menuaction.AppEndAction;
 
 public class SwitchMenuBar extends JMenuBar{
@@ -37,9 +38,22 @@ public class SwitchMenuBar extends JMenuBar{
      */
     private void makeMySetMenu(){
 
+        // とりあえず定数指定
+        MysetManagement mm = new MysetManagement();
+
+        MenuItem javaItem = new MenuItem(mm.getjavaMyset().getMysetName());
+        MenuItem splaItem = new MenuItem(mm.getSplaMyset().getMysetName());
+
+        mySetMenu.add(javaItem);
+        mySetMenu.add(splaItem);
+
+        
+
+        // 何もないときに表示
         if(mySetMenu.getMenuComponentCount() == 0){
             mySetMenu.add(ConstantName.MYSET_MENU_NOSET_TEXT.getElement());
         }
+
         this.add(mySetMenu);
     }
 }
