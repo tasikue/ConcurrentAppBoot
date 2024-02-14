@@ -1,13 +1,15 @@
 package com.oriharakun.kidosanswitch.setlist;
 
+import java.util.List;
+
 public class Myset {
 
-    private RuntimePath runtimePath;
+    private List<String> runtimePath;
     private String mysetName;
     private int mysetId;
     private boolean targetFlag;
 
-    public Myset(RuntimePath runtimePath, String mysetName, int mysetId){
+    public Myset(List<String> runtimePath, String mysetName, int mysetId){
         
         this.runtimePath = runtimePath;
         this.mysetName = mysetName;
@@ -15,7 +17,7 @@ public class Myset {
         targetFlag = false;
     }
 
-    public RuntimePath getRuntimePath() {
+    public List<String> getRuntimePath() {
         return runtimePath;
     }
 

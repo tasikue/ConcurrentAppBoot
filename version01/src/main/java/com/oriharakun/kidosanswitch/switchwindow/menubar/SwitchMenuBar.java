@@ -39,6 +39,7 @@ public class SwitchMenuBar extends JMenuBar{
     private void makeMySetMenu(){
 
         // とりあえず定数指定
+        /* 
         MysetManagement mm = new MysetManagement();
 
         MenuItem javaItem = new MenuItem(mm.getjavaMyset().getMysetName());
@@ -46,7 +47,7 @@ public class SwitchMenuBar extends JMenuBar{
 
         mySetMenu.add(javaItem);
         mySetMenu.add(splaItem);
-
+*/
         
 
         // 何もないときに表示

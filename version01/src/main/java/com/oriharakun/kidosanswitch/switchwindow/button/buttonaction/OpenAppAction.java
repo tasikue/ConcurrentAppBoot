@@ -12,8 +12,7 @@ public class OpenAppAction implements ActionListener{
 
     // 変数
     JButton button;
-    MysetManagement mm = new MysetManagement();
-
+    MysetPathRead mpe = new MysetPathRead();
 
     // コンストラクタ
     public OpenAppAction(JButton button){
@@ -25,9 +24,9 @@ public class OpenAppAction implements ActionListener{
 
         if(event.getSource() == button){
 
-            // 定数1はマイセットid, アクティブになってるボタンで決まる
-            if(mm.getjavaMyset().getMysetId() == 1){
-                for(String path : mm.getjavaMyset().getRuntimePath().getPath()){
+            // 定数1はマイセットid, アクティブになってるボタンで決まる(ここにfor文)
+            if(mpe.getMysetList().get(1).getMysetId() == 1){
+                for(String path : mpe.getMysetList().get(1).getRuntimePath()){
                     openApp(separateString(path));
                 }
             }
