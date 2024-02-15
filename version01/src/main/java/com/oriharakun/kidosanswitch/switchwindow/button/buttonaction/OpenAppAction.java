@@ -27,7 +27,7 @@ public class OpenAppAction implements ActionListener{
             // 定数1はマイセットid, アクティブになってるボタンで決まる(ここにfor文)
             if(mpe.getMysetList().get(1).getMysetId() == 1){
                 for(String path : mpe.getMysetList().get(1).getRuntimePath()){
-                    openApp(separateString(path));
+                    openApp(path.split(","));
                 }
             }
         }
@@ -44,13 +44,5 @@ public class OpenAppAction implements ActionListener{
         } catch(IOException e) {
             e.printStackTrace();
         }
-    }
-
-    /**
-     * カンマでStringを配列に分解する
-     * これは後でクラスに切り離す
-     */
-    private String[] separateString(String text){
-        return text.split(",");
     }
 }

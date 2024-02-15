@@ -5,7 +5,12 @@ import com.oriharakun.kidosanswitch.switchwindow.panel.*;
 import com.oriharakun.kidosanswitch.switchwindow.button.*;
 import com.oriharakun.kidosanswitch.switchwindow.menubar.*;
 
+import com.oriharakun.kidosanswitch.setlist.MysetPathRead;
+
 public class MainWindow {
+
+    // とりあえずここでフラグ管理
+    
 
     public static void main(String[] args) {
         SwitchFrame sf = new SwitchFrame();

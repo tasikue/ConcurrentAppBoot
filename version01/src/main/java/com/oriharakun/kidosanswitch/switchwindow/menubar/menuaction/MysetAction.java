@@ -18,7 +18,7 @@ public class MysetAction implements ActionListener{
 
         if(event.getSource() == menuItem){
             // ここにフラグを切り替える
-            
+            System.out.println("!");
         }
     }
 }

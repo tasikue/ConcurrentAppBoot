@@ -18,7 +18,7 @@ public class SwitchFrame extends JFrame{
 
     // 変数
     final Dimension WIN_DIMENSION = ConstantDimension.WINDOW_DIMENSION.getElement();
-    final ImageIcon iconPath = new ImageIcon(ConstantName.ICON_PATH.getElement());
+    final ImageIcon iconPath = new ImageIcon(ConstantFilePath.ICON_PATH.getElement());
 
     public SwitchFrame(){
 
