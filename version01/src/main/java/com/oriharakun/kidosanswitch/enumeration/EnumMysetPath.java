@@ -1,4 +1,4 @@
-package com.oriharakun.kidosanswitch.constants;
+package com.oriharakun.kidosanswitch.enumeration;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author oriharakun
  * @version 1.0
  */
-public enum ConstantMysetPath {
+public enum EnumMysetPath {
 
     // 定数 規則: セットID(数字1文字) + セット名(6文字) + 起動パス
     ARG_FIREFOX_PATH("0java__C:\\Program Files\\Mozilla Firefox\\firefox.exe,https://fs5013-furi-sutao.github.io/java-bootcamp/,https://drive.google.com/drive/home,https://github.com/tasikue/java-Bootcamp-orihara"),
@@ -21,7 +21,7 @@ public enum ConstantMysetPath {
     List<String> pathSend = new ArrayList<>();
 
     // コンストラクタ
-    private ConstantMysetPath(String elementPath){
+    private EnumMysetPath(String elementPath){
         this.elementPath = elementPath;
     }
 

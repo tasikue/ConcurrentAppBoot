@@ -1,11 +1,11 @@
-package com.oriharakun.kidosanswitch.constants;
+package com.oriharakun.kidosanswitch.enumeration;
 
 /**
  * 名前やラベルを管理する定数クラス
  * @author oriharakun
  * @version 1.0
  */
-public enum ConstantName {
+public enum EnumName {
     
     // 定数
     FRAME_MAIN_TITLE("きどうさんスイッチ"),
@@ -20,7 +20,7 @@ public enum ConstantName {
     private String elementName;
 
     // コンストラクタ
-    private ConstantName(String elementName){
+    private EnumName(String elementName){
         this.elementName = elementName;
     }
 

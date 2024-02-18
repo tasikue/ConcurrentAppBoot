@@ -1,15 +1,19 @@
 package com.oriharakun.kidosanswitch.setlist;
 
 import java.util.List;
+
+import com.oriharakun.kidosanswitch.enumeration.EnumMysetPath;
+import com.oriharakun.kidosanswitch.enumeration.EnumNumber;
+
 import java.util.ArrayList;
 
-import com.oriharakun.kidosanswitch.constants.ConstantMysetPath;
-import com.oriharakun.kidosanswitch.constants.ConstantNumber;
-
+/**
+ * ここで取得したパスを分解して収納する
+ */
 public class MysetPathRead {
 
     // 規則: セットID(数字1文字) + セット名(6文字) + 起動パス
-    ConstantMysetPath[] ARG_PATH = ConstantMysetPath.values();
+    EnumMysetPath[] ARG_PATH = EnumMysetPath.values();
 
     List<Myset> mysetList = new ArrayList<>();
 
@@ -18,7 +22,7 @@ public class MysetPathRead {
     
     public MysetPathRead(){
         setMysetList();
-        setTrueMysetTargetFlag(0);
+        setTrueMysetTargetFlag(EnumNumber.START_TARGET_FLAG.getElement());
     }
 
     /**
@@ -28,7 +32,7 @@ public class MysetPathRead {
     private void setMysetList(){
 
         // インデックスで区切りRuntimePathに分ける
-        for(int i=0; i<ConstantNumber.MAX_SET_COUNT.getElement(); i++){
+        for(int i=0; i<EnumNumber.MAX_SET_COUNT.getElement(); i++){
             List<String> tempList = new ArrayList<>();
             String tempSetName = "名無しセット";
 
@@ -37,8 +41,8 @@ public class MysetPathRead {
                 int mysetId = Character.getNumericValue(ARG_PATH[j].getElement().charAt(0));
                 updateMysetCount(mysetId);
                 if(mysetId == i){
-                    int idEndIndex = ConstantNumber.ID_COUNT.getElement();
-                    int nameEndIndex = idEndIndex + ConstantNumber.NAME_COUNT.getElement();
+                    int idEndIndex = EnumNumber.ID_COUNT.getElement();
+                    int nameEndIndex = idEndIndex + EnumNumber.NAME_COUNT.getElement();
                     
                     // セット名, 空欄である"_"を取り除く
                     tempSetName = ARG_PATH[j].getElement().substring(idEndIndex, nameEndIndex).replace("_", "");
@@ -91,7 +95,7 @@ public class MysetPathRead {
      * 指定のターゲットフラグをオンにする
      * @param mysetId ターゲットのフラグ
      */
-    private void setTrueMysetTargetFlag(int mysetId){
+    public void setTrueMysetTargetFlag(int mysetId){
         this.setAllFalseMysetTargetFlag();
 
         mysetList.get(mysetId).setTrueTargetFlag();

@@ -7,12 +7,13 @@ import java.io.IOException;
 import javax.swing.JButton;
 
 import com.oriharakun.kidosanswitch.setlist.*;
+import com.oriharakun.kidosanswitch.switchwindow.targetflag;
 
 public class OpenAppAction implements ActionListener{
 
     // 変数
     JButton button;
-    MysetPathRead mpe = new MysetPathRead();
+    MysetPathRead mpr = new MysetPathRead();
 
     // コンストラクタ
     public OpenAppAction(JButton button){
@@ -24,10 +25,12 @@ public class OpenAppAction implements ActionListener{
 
         if(event.getSource() == button){
 
-            // 定数1はマイセットid, アクティブになってるボタンで決まる(ここにfor文)
-            if(mpe.getMysetList().get(1).getMysetId() == 1){
-                for(String path : mpe.getMysetList().get(1).getRuntimePath()){
-                    openApp(path.split(","));
+            // アクティブになってるボタンで決まる
+            for(int i=0; i<mpr.getAllMysetCount(); i++){
+                if(mpr.getMysetList().get(i).getMysetId() == targetflag.getIndexTargetFlagTrue()){
+                    for(String path : mpr.getMysetList().get(i).getRuntimePath()){
+                        openApp(path.split(","));
+                    }
                 }
             }
         }

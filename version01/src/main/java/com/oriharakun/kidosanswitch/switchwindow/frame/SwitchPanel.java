@@ -1,10 +1,11 @@
-package com.oriharakun.kidosanswitch.switchwindow.panel;
+package com.oriharakun.kidosanswitch.switchwindow.frame;
 
 import javax.swing.JPanel;
+
+import com.oriharakun.kidosanswitch.enumeration.*;
+
 import java.awt.Color;
 import java.awt.GridBagLayout;
-
-import com.oriharakun.kidosanswitch.constants.*;
 
 /**
  * スイッチウィンドウのパネル
@@ -17,6 +18,6 @@ public class SwitchPanel extends JPanel{
     public SwitchPanel(){
         this.setBackground(Color.GRAY);
         this.setLayout(new GridBagLayout());
-        this.setPreferredSize(ConstantDimension.SWITCH_PANEL_DIMENSION.getElement());
+        this.setPreferredSize(EnumDimension.SWITCH_PANEL_DIMENSION.getElement());
     }
 }

@@ -1,5 +1,8 @@
 package com.oriharakun;
 
+import com.oriharakun.kidosanswitch.switchwindow.MainWindow;
+import com.oriharakun.kidosanswitch.switchwindow.targetflag;
+
 /**
  * ここから起動するメイン
  * @author oriharakun
@@ -9,6 +12,6 @@ public class App {
     
     public static void main( String[] args ){
 
-        //mainWindow window = new App();
+        MainWindow window = new MainWindow();
     }
 }

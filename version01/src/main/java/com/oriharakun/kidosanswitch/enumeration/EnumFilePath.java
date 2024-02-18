@@ -1,11 +1,11 @@
-package com.oriharakun.kidosanswitch.constants;
+package com.oriharakun.kidosanswitch.enumeration;
 
 /**
  * 名前やラベルを管理する定数クラス
  * @author oriharakun
  * @version 1.0
  */
-public enum ConstantFilePath {
+public enum EnumFilePath {
     
     // 定数
     ICON_PATH("C:\\\\Users\\\\swing\\\\scoop\\\\apps\\\\vscode\\\\current\\\\data\\\\ConcurrentAppBoot\\\\icon\\\\momo3.png");
@@ -14,7 +14,7 @@ public enum ConstantFilePath {
     private String elementPath;
 
     // コンストラクタ
-    private ConstantFilePath(String elementPath){
+    private EnumFilePath(String elementPath){
         this.elementPath = elementPath;
     }
 

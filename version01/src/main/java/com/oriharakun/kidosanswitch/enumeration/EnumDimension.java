@@ -1,4 +1,4 @@
-package com.oriharakun.kidosanswitch.constants;
+package com.oriharakun.kidosanswitch.enumeration;
 
 import java.awt.Dimension;
 
@@ -7,7 +7,7 @@ import java.awt.Dimension;
  * @auther oriharakun
  * @version 1.0
  */
-public enum ConstantDimension{
+public enum EnumDimension{
     
     // 定数
     WINDOW_DIMENSION(new Dimension(280, 280*3/4)),
@@ -18,7 +18,7 @@ public enum ConstantDimension{
     private Dimension elementNumber;
 
     // コンストラクタ
-    private ConstantDimension(Dimension elementNumber){
+    private EnumDimension(Dimension elementNumber){
         this.elementNumber = elementNumber;
     }
 

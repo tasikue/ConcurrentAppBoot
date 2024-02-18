@@ -1,26 +1,35 @@
 package com.oriharakun.kidosanswitch.switchwindow;
 
 import com.oriharakun.kidosanswitch.switchwindow.frame.*;
-import com.oriharakun.kidosanswitch.switchwindow.panel.*;
 import com.oriharakun.kidosanswitch.switchwindow.button.*;
 import com.oriharakun.kidosanswitch.switchwindow.menubar.*;
 
-import com.oriharakun.kidosanswitch.setlist.MysetPathRead;
-
+/**
+ * メイン画面の組み立て
+ * @author orihara
+ * @version 1.0
+ */
 public class MainWindow {
 
-    // とりあえずここでフラグ管理
-    
+    static SwitchFrame switchFrame = new SwitchFrame();
+    static SwitchPanel switchPanelOne = new SwitchPanel();
+    static RuntimeButton runtimeButton = new RuntimeButton();
+    static SwitchMenuBar switchMenuBar = new SwitchMenuBar();
 
-    public static void main(String[] args) {
-        SwitchFrame sf = new SwitchFrame();
-        SwitchPanel p1 = new SwitchPanel();
-        RuntimeButton rb = new RuntimeButton();
-        SwitchMenuBar smb = new SwitchMenuBar();
+    public MainWindow(){
+        // フレームセット
+        switchPanelOne.add(runtimeButton);
+        switchFrame.setJMenuBar(switchMenuBar);
+        switchFrame.add(switchPanelOne);
+        switchFrame.setVisible(true);
+    }
 
-        p1.add(rb);
-        sf.setJMenuBar(smb);
-        sf.add(p1);
-        sf.setVisible(true);
+    /**
+     * メニューバー更新
+     */
+    public static void updateMenuber(){
+        switchMenuBar = new SwitchMenuBar();
+        switchFrame.setJMenuBar(switchMenuBar);
+        switchFrame.setVisible(true);
     }
 }

@@ -5,9 +5,10 @@ import java.awt.Rectangle;
 import java.awt.Dimension;
 import java.awt.GraphicsEnvironment;
 import javax.swing.JFrame;
-import javax.swing.ImageIcon;
 
-import com.oriharakun.kidosanswitch.constants.*;
+import com.oriharakun.kidosanswitch.enumeration.*;
+
+import javax.swing.ImageIcon;
 
 /**
  * スイッチウィンドウのフレーム
@@ -17,12 +18,12 @@ import com.oriharakun.kidosanswitch.constants.*;
 public class SwitchFrame extends JFrame{
 
     // 変数
-    final Dimension WIN_DIMENSION = ConstantDimension.WINDOW_DIMENSION.getElement();
-    final ImageIcon iconPath = new ImageIcon(ConstantFilePath.ICON_PATH.getElement());
+    Dimension WIN_DIMENSION = EnumDimension.WINDOW_DIMENSION.getElement();
+    final ImageIcon iconPath = new ImageIcon(EnumFilePath.ICON_PATH.getElement());
 
     public SwitchFrame(){
 
-        this.setTitle(ConstantName.FRAME_MAIN_TITLE.getElement());
+        this.setTitle(EnumName.FRAME_MAIN_TITLE.getElement());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new FlowLayout());
         this.setSize(WIN_DIMENSION);
