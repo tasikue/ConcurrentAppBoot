@@ -1,7 +1,6 @@
 package com.oriharakun;
 
 import com.oriharakun.kidosanswitch.switchwindow.MainWindow;
-import com.oriharakun.kidosanswitch.switchwindow.targetflag;
 
 /**
  * ここから起動するメイン

@@ -14,7 +14,9 @@ public enum EnumName {
     FILE_SETTING_MENU_LABEL("設定"),
     FILE_ENDING_MENU_LABEL("終了"),
     MYSET_MENU_LABEL("マイセット"),
-    MYSET_MENU_NOSET_TEXT("何も登録されていません");
+    MYSET_MENU_NOSET_TEXT("何も登録されていません"),
+    DOTEXE(".exe"),
+    BACKSLASH("\\");
 
     // フィールド
     private String elementName;

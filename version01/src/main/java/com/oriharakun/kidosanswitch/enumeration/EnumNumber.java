@@ -11,7 +11,7 @@ public enum EnumNumber {
     MAX_SET_COUNT(9), // 登録できるマイセットの限界（暫定）
     ID_COUNT(1), // IDの桁数
     NAME_COUNT(6), // 名前の桁数
-    START_TARGET_FLAG(1); // 起動時のフラグ
+    START_TARGET_FLAG(0); // 起動時のフラグ
 
     // フィールド
     private int elementNumber;

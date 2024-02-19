@@ -14,7 +14,9 @@ public enum EnumMysetPath {
     ARG_FIREFOX_PATH("0java__C:\\Program Files\\Mozilla Firefox\\firefox.exe,https://fs5013-furi-sutao.github.io/java-bootcamp/,https://drive.google.com/drive/home,https://github.com/tasikue/java-Bootcamp-orihara"),
     ARG_VSCODE_PATH("0java__C:\\Users\\swing\\scoop\\apps\\vscode\\current\\Code.exe"),
     ARG_GITBASH_PATH("0java__C:\\Users\\swing\\scoop\\apps\\git\\current\\git-bash.exe"),
-    ARG_OBS_PATH("1obs___C:\\Program Files\\obs-studio\\bin\\64bit\\obs64.exe");
+    ARG_VIRTUALBOX_PATH("1linux_C:\\Program Files\\Oracle\\VirtualBox\\VirtualBox.exe"),
+    ARG_TERATERM_PATH("1linux_C:\\Program Files (x86)\\teraterm5\\ttermpro.exe"),
+    ARG_LINUXTEXT_FOLDER_PATH("1linuc_explorer.exe,C:\\Users\\swing\\Documents\\勉強\\Linux");
 
     // フィールド
     private String elementPath;
