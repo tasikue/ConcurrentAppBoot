@@ -8,7 +8,7 @@ package com.oriharakun.kidosanswitch.enumeration;
 public enum EnumFilePath {
     
     // 定数
-    ICON_PATH("C:\\\\Users\\\\swing\\\\scoop\\\\apps\\\\vscode\\\\current\\\\data\\\\ConcurrentAppBoot\\\\icon\\\\momo3.png");
+    ICON_PATH("C:\\\\Users\\\\swing\\\\scoop\\\\apps\\\\vscode\\\\current\\\\data\\\\ConcurrentAppBoot\\\\icon.png");
 
     // フィールド
     private String elementPath;

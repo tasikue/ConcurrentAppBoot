@@ -1,0 +1,7 @@
+0java__C:\\Program Files\\Mozilla Firefox\\firefox.exe,https://fs5013-furi-sutao.github.io/java-bootcamp/,https://drive.google.com/drive/home,https://github.com/tasikue/java-Bootcamp-orihara
+0java__C:\\Users\\swing\\scoop\\apps\\vscode\\current\\Code.exe
+0java__C:\\Users\\swing\\scoop\\apps\\git\\current\\git-bash.exe
+0java__explorer.exe,C:\\Users\\swing\\Documents\\勉強\\Linux
+1linux_C:\\Program Files\\Oracle\\VirtualBox\\VirtualBox.exe
+1linux_C:\\Program Files (x86)\\teraterm5\\ttermpro.exe
+1linuc_explorer.exe,C:\\Users\\swing\\Documents\\勉強\\Linux

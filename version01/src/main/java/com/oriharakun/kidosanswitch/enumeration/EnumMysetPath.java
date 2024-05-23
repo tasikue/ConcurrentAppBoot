@@ -10,7 +10,11 @@ import java.util.ArrayList;
  */
 public enum EnumMysetPath {
 
-    // 定数 規則: セットID(数字1文字) + セット名(6文字) + 起動パス
+    /*
+     * 定数
+     * ここに文字列の追加で起動ソフトを追加できる
+     * 規則: セットID(数字1文字) + セット名(6文字) + 起動パス
+     */
     ARG_FIREFOX_PATH("0java__C:\\Program Files\\Mozilla Firefox\\firefox.exe,https://fs5013-furi-sutao.github.io/java-bootcamp/,https://drive.google.com/drive/home,https://github.com/tasikue/java-Bootcamp-orihara"),
     ARG_VSCODE_PATH("0java__C:\\Users\\swing\\scoop\\apps\\vscode\\current\\Code.exe"),
     ARG_GITBASH_PATH("0java__C:\\Users\\swing\\scoop\\apps\\git\\current\\git-bash.exe"),
