@@ -7,9 +7,10 @@ package com.oriharakun.kidosanswitch.window;
 public enum Dimensions{
     
     // 定数
-    WINDOW_DIMENSION(280, 280*3/4),
-    SWITCH_PANEL_DIMENSION(240, 240*1/4),
-    RUNTIME_BUTTON_DIMENSION(120, 120*3/8);
+    SWITCH_SCREEEN(280, 280*3/4),
+    SETTING_SCREEN(600, 400),
+    SWITCH_PANEL(240, 240*1/4),
+    RUNTIME_BUTTON(120, 120*3/8);
 
     // フィード
     private int width;

@@ -5,11 +5,18 @@ import javax.swing.JLabel;
 import com.oriharakun.kidosanswitch.Names;
 import com.oriharakun.kidosanswitch.mysetlist.ListSet;
 
-public class ProgramTitle extends JLabel{
+/**
+ * 指定の.EXEファイルのラベルを書き出すクラス
+ */
+public class ExeLabel extends JLabel{
 
-    ListSet mpr = new ListSet();
+    // マイセットに登録されたアプリのリスト
+    private ListSet mysetList = new ListSet();
     
-    public ProgramTitle(){
+    /**
+     * コンストラクタ
+     */
+    public ExeLabel(){
         this.setHorizontalAlignment(JLabel.CENTER);
     }
 
@@ -40,9 +47,9 @@ public class ProgramTitle extends JLabel{
     public String getAllAppTitle(int mysetId){
         String tempString = "";
 
-        for(int i=0; i<mpr.getAllMysetCount(); i++){
-            if(mpr.getMysetList().get(i).getMysetId() == mysetId){
-                for(String path : mpr.getMysetList().get(i).getRuntimePath()){
+        for(int i=0; i<mysetList.getAllMysetCount(); i++){
+            if(mysetList.getMysetList().get(i).getMysetId() == mysetId){
+                for(String path : mysetList.getMysetList().get(i).getRuntimePath()){
                     tempString += String.format(getAppTitle(path) + " ");
                 }
             }

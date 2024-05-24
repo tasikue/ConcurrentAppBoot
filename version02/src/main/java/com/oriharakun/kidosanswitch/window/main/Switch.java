@@ -5,27 +5,36 @@ import com.oriharakun.kidosanswitch.window.menubar.*;
 
 /**
  * メイン画面の組み立て
- * @author orihara
- * @version 1.0
  */
 public class Switch {
 
-    static SwitchFrame switchFrame = new SwitchFrame();
-    static SwitchPanel switchPanelOne = new SwitchPanel();
-    static SwitchPanel switchPanelTwe = new SwitchPanel();
-    static RuntimeButton runtimeButton = new RuntimeButton();
-    static SwitchMenuBar switchMenuBar = new SwitchMenuBar();
-    static ProgramTitle programTitle = new ProgramTitle();
+    // インスタンス
+    private static ExeLabel exeLabel = new ExeLabel();
+    private static Panel exePanel = new Panel();
+    private static Panel buttonPanel = new Panel();
+    private static Frame frame = new Frame();
+    private static RuntimeButton runtimeButton = new RuntimeButton();
+    private static SwitchMenuBar menuBar = new SwitchMenuBar();
 
+    /**
+     * コンストラクタ
+     */
     public Switch(){
-        // フレームセット
-        programTitle.setText(programTitle.getAllAppTitle(targetflag.getIndexTargetFlagTrue()));
-        switchPanelOne.add(programTitle);
-        switchPanelTwe.add(runtimeButton);
-        switchFrame.setJMenuBar(switchMenuBar);
-        switchFrame.add(switchPanelOne);
-        switchFrame.add(switchPanelTwe);
-        switchFrame.setVisible(true);
+        
+        // ラベル
+        exeLabel.setText(exeLabel.getAllAppTitle(targetflag.getIndexTargetFlagTrue()));
+
+        // パネルのセット
+        exePanel.add(exeLabel);
+        buttonPanel.add(runtimeButton);
+
+        // フレームのセット
+        frame.setJMenuBar(menuBar);
+        frame.add(exePanel);
+        frame.add(buttonPanel);
+
+        // 実体化
+        frame.setVisible(true);
     }
 
     /**
@@ -33,12 +42,12 @@ public class Switch {
      */
     public static void updateMenuber(){
         // メニューバー更新
-        switchMenuBar = new SwitchMenuBar();
-        switchFrame.setJMenuBar(switchMenuBar);
+        menuBar = new SwitchMenuBar();
+        frame.setJMenuBar(menuBar);
 
         // ラベル更新
-        programTitle.setText(programTitle.getAllAppTitle(targetflag.getIndexTargetFlagTrue()));
+        exeLabel.setText(exeLabel.getAllAppTitle(targetflag.getIndexTargetFlagTrue()));
 
-        switchFrame.setVisible(true);
+        frame.setVisible(true);
     }
 }

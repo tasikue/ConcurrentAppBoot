@@ -14,7 +14,7 @@ import com.oriharakun.kidosanswitch.window.Dimensions;
  */
 public class RuntimeButton extends JButton{
 
-    final Dimension RUN_BUT_Width = new Dimension(Dimensions.RUNTIME_BUTTON_DIMENSION.getWidth(), Dimensions.RUNTIME_BUTTON_DIMENSION.getHeight());
+    final Dimension RUN_BUT_Width = new Dimension(Dimensions.RUNTIME_BUTTON.getWidth(), Dimensions.RUNTIME_BUTTON.getHeight());
     OpenAppAction openAppAction = new OpenAppAction(this);
 
     public RuntimeButton(){
